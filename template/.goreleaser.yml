@@ -1,0 +1,32 @@
+project_name: {{Name}}
+
+env:
+  - GO111MODULE=on
+
+before:
+  hooks:
+  - go mod download
+  - ./scripts/test.sh
+  - ./scripts/report.sh
+
+builds:
+- main: ./cmd/{{Name}}/main.go
+  env:
+  - CGO_ENABLED=0
+  goos:
+  - linux
+  - darwin
+  - windows
+  goarch:
+  - amd64
+  binary: '{{"{{"}} .ProjectName {{"}}"}}'
+{{ if DockerHub }}
+dockers:
+- binaries:
+  - '{{"{{"}} .ProjectName {{"}}"}}'
+  image_templates:
+  - "{{DockerUser}}/{{"{{"}}.ProjectName{{"}}"}}:latest"
+  - "{{DockerUser}}/{{"{{"}}.ProjectName{{"}}"}}:{{"{{"}} .Tag {{"}}"}}"
+  - "{{DockerUser}}/{{"{{"}}.ProjectName{{"}}"}}:v{{"{{"}} .Major {{"}}"}}"
+  - "{{DockerUser}}/{{"{{"}}.ProjectName{{"}}"}}:v{{"{{"}} .Major {{"}}"}}.{{"{{"}} .Minor {{"}}"}}"
+{{ end }}

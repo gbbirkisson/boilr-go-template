@@ -1,0 +1,13 @@
+{
+	"name": "{{Name}}",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "{{Name}}",
+	"workspaceFolder": "/workspace",
+	"postCreateCommand": "go mod download",
+	"extensions": [
+		"ms-vscode.go"
+	],
+	"settings": {
+		"go.gopath": "/go"
+	}
+}

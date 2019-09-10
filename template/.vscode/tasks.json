@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Test",
+            "type": "shell",
+            "group": "test",
+            "command": "./scripts/test.sh",
+        },
+        {
+            "label": "Report",
+            "type": "shell",
+            "group": "test",
+            "command": "./scripts/report.sh",
+        },
+        {
+            "label": "Build",
+            "type": "shell",
+            "group": "test",
+            "command": "goreleaser --snapshot --skip-publish --rm-dist",
+        },
+        {
+            "label": "Release",
+            "type": "shell",
+            "group": "test",
+            "command": "goreleaser --rm-dist",
+        },
+    ]
+}

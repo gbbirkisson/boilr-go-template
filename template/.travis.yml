@@ -1,0 +1,34 @@
+{{ if TravisCI }}language: go
+
+go:
+- 1.13
+
+services:
+- docker
+
+env:
+  global:
+  - GO111MODULE=on
+
+before_install:
+- ./scripts/install_test_dep.sh
+
+script:
+- go mod download
+- ./scripts/report.sh
+- ./scripts/test.sh
+
+after_success:
+- echo "Success!"
+{{ if Codecov }}- bash <(curl -s https://codecov.io/bash){{ end }}
+{{ if DockerHub }}- test -n "$TRAVIS_TAG" && echo "$DOCKER_PASSWORD" | docker login -u "{{DockerUser}}" --password-stdin{{ end }}
+
+# calls goreleaser
+deploy:
+- provider: script
+  skip_cleanup: true
+  script: curl -sL https://git.io/goreleaser | bash
+  on:
+    tags: true
+    condition: $TRAVIS_OS_NAME = linux
+{{ end }}
