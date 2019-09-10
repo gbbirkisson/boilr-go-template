@@ -1,4 +1,4 @@
-module github.com/gbbirkisson/my-project
+module github.com/gbbirkisson/{{ProjectName}}
 
 go 1.13
 
