@@ -12,4 +12,5 @@ This is a highly opinionated project template for creating go projects using [bo
 
 ## More Information
 
-For more information please check [boilr](https://github.com/tmrts/boilr)
+- [Go Standards - Project Layout](https://github.com/golang-standards/project-layout)
+- [boilr](https://github.com/tmrts/boilr)
