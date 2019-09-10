@@ -1,6 +1,5 @@
-{{ if DockerHub }}FROM scratch
+FROM scratch
 
-COPY {{Name}} /bin/{{Name}}
+COPY {{ProjectName}} /bin/{{ProjectName}}
 
-ENTRYPOINT ["/bin/{{Name}}"]
-{{ end }}
+ENTRYPOINT ["/bin/{{ProjectName}}"]

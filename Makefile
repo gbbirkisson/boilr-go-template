@@ -1,8 +1,11 @@
 TEMPLATE_NAME := test
+TEST_PROJECT_DIR := ../my-project 
+
+clean:
+	@rm -rf ${TEST_PROJECT_DIR}
 
 save:
 	boilr template save -f . ${TEMPLATE_NAME}
 
-test: save
-	@rm -rf ./my-project
-	boilr template use ${TEMPLATE_NAME} ./my-project
+test: clean save
+	boilr template use ${TEMPLATE_NAME} ${TEST_PROJECT_DIR}

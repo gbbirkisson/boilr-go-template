@@ -1,11 +1,15 @@
-# License Template
-This is a project template for creating licenses using [boilr](https://github.com/tmrts/boilr)
+# Boilr Go Template
+
+This is a highly opinionated project template for creating go projects using [boilr](https://github.com/tmrts/boilr)
 
 ## Install
-`boilr template download tmrts/boilr-license license`
+
+`boilr template download gbbirkisson/boilr-go-template gbbirkisson-go`
 
 ## Usage
-`boilr template use license <my-project-dir>`
+
+`boilr template use gbbirkisson-go <my-project-dir>`
 
 ## More Information
+
 For more information please check [boilr](https://github.com/tmrts/boilr)

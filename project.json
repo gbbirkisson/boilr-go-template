@@ -1,15 +1,11 @@
 {
-    "GithubUser": "gbbirkisson",
-    "Name": "my-project",
+    "Username": "gbbirkisson",
+    "ProjectName": "my-project",
     "Author": "Guðmundur Björn Birkisson",
     "Year": "2019",
     "License": [
         "Apache Software License 2.0",
         "MIT", 
         "GNU GPL v3.0"
-    ],
-    "TravisCI": true,
-    "Codecov": true,
-    "DockerHub": true,
-    "DockerUser": "gbbirkisson"
+    ]
 }

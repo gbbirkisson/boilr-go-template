@@ -1,4 +1,4 @@
-{{ if TravisCI }}language: go
+language: go
 
 go:
 - 1.13
@@ -19,9 +19,8 @@ script:
 - ./scripts/test.sh
 
 after_success:
-- echo "Success!"
-{{ if Codecov }}- bash <(curl -s https://codecov.io/bash){{ end }}
-{{ if DockerHub }}- test -n "$TRAVIS_TAG" && echo "$DOCKER_PASSWORD" | docker login -u "{{DockerUser}}" --password-stdin{{ end }}
+- bash <(curl -s https://codecov.io/bash)
+- test -n "$TRAVIS_TAG" && echo "$DOCKER_PASSWORD" | docker login -u "{{Username}}" --password-stdin
 
 # calls goreleaser
 deploy:
@@ -31,4 +30,3 @@ deploy:
   on:
     tags: true
     condition: $TRAVIS_OS_NAME = linux
-{{ end }}

@@ -22,9 +22,6 @@ RUN apt-get update \
     #
     # Install Go tools
     && go get -u -v \
-        github.com/client9/misspell/cmd/misspell \
-        github.com/fzipp/gocyclo \
-        github.com/gordonklaus/ineffassign \
         github.com/mdempsky/gocode \
         github.com/uudashr/gopkgs/cmd/gopkgs \
         github.com/ramya-rao-a/go-outline \
@@ -41,7 +38,6 @@ RUN apt-get update \
         github.com/fatih/gomodifytags \
         github.com/cweill/gotests/... \
         golang.org/x/tools/cmd/goimports \
-        golang.org/x/lint/golint \
         golang.org/x/tools/cmd/gopls \
         github.com/alecthomas/gometalinter \
         honnef.co/go/tools/... \

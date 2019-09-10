@@ -1,11 +1,13 @@
 {
-	"name": "{{Name}}",
+	"name": "{{ProjectName}}",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "{{Name}}",
+	"service": "{{ProjectName}}",
 	"workspaceFolder": "/workspace",
-	"postCreateCommand": "go mod download",
+	"postCreateCommand": "go mod download && ./scripts/install_test_dep.sh",
 	"extensions": [
-		"ms-vscode.go"
+		"ms-vscode.go",
+		"yzhang.markdown-all-in-one",
+		"quicktype.quicktype"
 	],
 	"settings": {
 		"go.gopath": "/go"
