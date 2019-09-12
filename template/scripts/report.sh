@@ -3,7 +3,7 @@
 ERR="false"
 
 run () {
-    echo "Running ${1}..."
+    echo "Running ${@:1}"
     diff -u <(echo -n) <(${@:1})
     if [ $? -ne 0 ]
     then

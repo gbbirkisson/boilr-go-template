@@ -1,5 +1,5 @@
 TEMPLATE_NAME := test
-TEST_PROJECT_DIR := ../my-project 
+TEST_PROJECT_DIR := ../my-project4
 
 clean:
 	@rm -rf ${TEST_PROJECT_DIR}

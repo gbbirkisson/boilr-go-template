@@ -9,6 +9,8 @@
 {{ if eq License "Apache Software License 2.0" }}<a href="./LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square"/></a>{{ else if eq License "MIT" }}<a href="./LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square"/></a>{{ else if eq License "GNU GPL v3.0" }}<a href="./LICENSE" target="_blank"><img src="https://img.shields.io/badge/license-GPL-blue?style=flat-square"/></a>{{ end }}
 </p>
 
+## TODO
+
 In travis set:
 * GITHUB_TOKEN
 * CODECOV_TOKEN
@@ -16,6 +18,7 @@ In travis set:
 
 ## Table of contents
 
+- [TODO](#todo)
 - [Table of contents](#table-of-contents)
 - [Installing](#installing)
 - [Configuration](#configuration)
